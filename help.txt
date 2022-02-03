@@ -1,0 +1,62 @@
+***********************************************
+*                                             *
+*  Fake News Detector Command Line Interface  *
+*                                             *
+***********************************************
+
+format:
+python cli.py <statement> --subject <subject> --speaker <speaker> --job <job> --state <state> --party <party> --venue <venue>
+return:
+[<prediction>, <correct probability>]
+
+example:
+python cli.py  "Since 1968, more Americans have died from gunfire than died in all the wars of this countrys history." --subject guns --speaker mark-shields --job Columnist --state 'Washington, D.C.' --venue 'the PBS NewsHour'
+return:
+['true', 0.88939434]
+
+
+    --speaker    'barack-obama', 'donald-trump', 'hillary-clinton',
+                 'mitt-romney', 'scott-walker', 'john-mccain',
+                 'rick-perry', 'chain-email', 'marco-rubio', 'viral-image',
+                 'rick-scott', 'ted-cruz', 'bernie-s', 'newt-gingrich',
+                 'chris-christie', 'facebook-posts', 'blog-posting',
+                 'charlie-crist', 'congressional', 'republican',
+                 'national-committe', 'democratic', 'other'
+
+    --job    'senator', 'president', 'governor',
+             'u.s. representative', 'attorney', 'congressman',
+             'congresswoman', 'social media posting', 'lawyer',
+             'businessman', 'radio host', 'host',
+             'mayor', 'assembly', 'representative',
+             'senate', 'state representative', 'milwaukee county executive',
+             'u.s. house of representatives', 'house representative',
+             'house of representatives', 'house member', 'other'
+
+    --state    'texas', 'florida', 'wisconsin', 'new york',
+               'illinois', 'ohio', 'georgia', 'virginia',
+               'rhode island', 'oregon', 'new jersey',
+               'massachusetts', 'arizona', 'california',
+               'washington', 'wyoming', 'colorado', 'hawaii', 'tennessee', 'nevada', 'maine',
+               'north dakota', 'mississippi', 'south dakota', 'oklahoma',
+               'delaware', 'minnesota', 'north carolina', 'arkansas', 'indiana',
+               'maryland', 'louisiana', 'idaho', 'iowa', 'west virginia',
+               'michigan', 'kansas', 'utah', 'connecticut', 'montana', 'vermont',
+               'pennsylvania', 'alaska', 'kentucky', 'nebraska', 'new hampshire',
+               'missouri', 'south carolina', 'alabama', 'new mexico', 'other'
+
+    --subject    'health', 'tax', 'immigration', 'election',
+                 'education', 'candidates-biography', 'economy',
+                 'gun', 'job', 'federal-budget', 'energy',
+                 'abortion', 'foreign-policy', 'state-budget',
+                 'crime', 'gays-and-lesbians', 'medicare',
+                 'terrorism', 'finance', 'criminal',
+                 'transportation', 'other'
+
+    --venue    'news release', 'interview', 'press release',
+               'speech', 'tv', 'tweet', 'campaign',
+               'television', 'debate', 'news conference',
+               'facebook', 'press conference', 'radio',
+               'e-mail', 'email', 'mail', 'social media',
+               'twitter', 'blog', 'article', 'comment', 'web', 'other'
+
+    --party    'republican', 'democrat', 'none', 'organization', 'independent','other'
